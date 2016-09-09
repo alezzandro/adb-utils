@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # Export get_ip_address
-. /opt/adb/openshift/get_ip_address
+. /etc/sysconfig/openshift_option
 
 # Prepare, configure and start OpenShift
 
@@ -20,7 +20,7 @@ NO_PROXY=${NO_PROXY:-""}
 
 
 # Get machine IP address
-ip=$(get_ip_address)
+ip=$OPENSHIFT_IP
 
 # Proxy setup config
 read -r -d '' PROXY_CONFIG << EOM

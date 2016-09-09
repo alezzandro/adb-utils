@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+# Not used anymore
 
 function get_ip_address()
 {

@@ -10,7 +10,7 @@ URL:           https://github.com/projectatomic/%{name}
 Source0:       https://github.com/projectatomic/%{name}/archive/v%{version}.tar.gz
 
 BuildRequires: systemd
-Requires: python-netifaces
+Requires: python-netifaces, docker
 
 %description
 Includes the utils files and service files that are required for the running
