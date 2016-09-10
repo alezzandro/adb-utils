@@ -3,7 +3,7 @@
 # Modify these options if you want to change openshift hostname
 OPENSHIFT_USER="vagrant"
 OPENSHIFT_IP=$(ip -o -4 addr show up |egrep -v ': docker|: lo' |tail -1 | awk '{print $4}' |cut -f1 -d\/)
-OPENSHIFT_SUBDOMAIN="$(hostname).$(/opt/adb/openshift/${OPENSHIFT_IP}.xip.io"
+OPENSHIFT_SUBDOMAIN="$(hostname).${OPENSHIFT_IP}.xip.io"
 IMAGE="docker.io/openshift/origin:latest"
 #NO_PROXY=localhost
 #HTTP_PROXY=http://USER:PASSWORD@IPADDR:PORT
